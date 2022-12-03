@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+html {
+    font-family:'Montserrat', sans-serif;
+}
+*, ::before , ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(36,36,231,1) 0%, rgba(0,212,255,1) 100%) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    position: absolute;
+    top: 0;
+    max-width: 100vw;
+    text-align: center;
+    color: white;  
+}
+.text2{
+    position: absolute;
+    bottom: 6em;
+    max-width: 100vw;
+    text-align: center;
+    color: white;  
+}
+.calculator {
+    height: 70vh;
+    min-width: 370px;
+    max-width: 370px;
+}
+.display {
+    width: 100% ;
+    min-height: 10%;
+    max-height: min-content;
+    background-color:rgba(29, 27, 27, 0.151);
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: white;
+    word-break: break-all;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+.currentNumber {
+    font-size: 35px;
+}
+
+.panel {
+    height: 80%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+}
+.panel button {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+button:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+
+}
+.equales {
+    grid-column:1/3 ;
+}
+.last {
+    grid-column: -4/-1;
+}
